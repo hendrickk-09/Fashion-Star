@@ -1,6 +1,9 @@
 let show = true;
 const menuContent = document.querySelector('.content');
 const menuToggle = menuContent.querySelector('.menu-toggle');
+const carrinho = document.querySelector(".montar");
+const caixa = document.querySelector("caixa");
+
 
 
 menuToggle.addEventListener('click', () => {
@@ -10,3 +13,7 @@ menuToggle.addEventListener('click', () => {
     menuContent.classList.toggle('on', show);
     show = !show;
 })
+
+carrinho.addEventListener('Click', () => {
+    caixa.classList.remove("oculta");
+});

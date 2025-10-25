@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +38,7 @@ html {
     background-image: linear-gradient(to right, #89A8D7, #ABA7D9, #BF98CD, #CD86A8, #D797BC, #E59F9D);
     position: fixed;
     padding-left: 30rem;
+    border-bottom: 4px solid #EFEFEF;
 }
 
 .logo {
@@ -90,7 +93,7 @@ html {
 .first-section{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(./img/fundopizza.jpg);
+    background-color: #EFEFEF;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,11 +113,10 @@ html {
 }
 
 .first-section h1{
-    color: #ffc506;
+    color: #3C174E;
     font-size: 6rem;
-    text-transform: uppercase;
     margin-bottom: 1rem;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Playwrite AU TAS';
 }
 
 .first-section h2{
@@ -131,18 +133,18 @@ html {
     height: 60px;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #ffc506;
+    background-color: #d797bc;
     border-radius: 10px;
-    color: black;
+    color: white;
     font-weight: 700;
     transition: all 400ms ease-in;
     margin-top: 5rem;
 }
 
 .btn button:hover {
-    border: 1px solid #ffc506;
-    background-color: transparent;
-    color: #ffc506;
+    border: 1px solid #943F88;
+    background-color: #d797bc65;
+    color: #3C174E;
 }
 
 .btn {
@@ -167,6 +169,7 @@ html {
 }
 
 .cardapio h2 {
+    margin-top: 15px;
     font-size: 5rem;
     color: #e6e6e6;
     text-transform: uppercase;
@@ -181,6 +184,7 @@ html {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    
 }
 
 .itens-cardapio .info {
@@ -197,7 +201,6 @@ html {
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    text-decoration: underline;
 }
 
 .itens-cardapio .info h4 {
@@ -248,7 +251,7 @@ html {
 /* Sobre nós */
 
 .sobre-nos {
-    background-color: #1f1e1f;
+    background-image: linear-gradient(45deg, #89A8D7, #ABA7D9, #BF98CD, #CD86A8, #D797BC, #E59F9D);
     width: 100%;
     padding-bottom: 5rem;
     color: white;
@@ -287,6 +290,7 @@ html {
 
 .contentsobre p {
    text-align: center;
+   text-align: justify;
    font-size: 1.8rem;
    width: 600px;
 }
@@ -350,6 +354,10 @@ footer {
         margin-left: -2px;
     }
 
+    .first-section{
+    height: 120vh;
+    }
+
     
 }
 
@@ -357,6 +365,10 @@ footer {
    
     html {
         font-size: 50%;
+    }
+
+    .first-section{
+    height: 120vh;
     }
     
 }
@@ -454,6 +466,11 @@ footer {
         
     }
 
+    .first-section{
+    height: 120vh;
+    }
+
+
 }
 
 
@@ -462,6 +479,12 @@ footer {
         width: 350px;
         text-align: center;
     }
+
+    .first-section{
+    height: 120vh;
+    }
+
+
 }
 
 @media (max-width: 645px) {
@@ -475,11 +498,21 @@ footer {
         width: 400px;
      }
 
-     .btn {
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-     }
+    .first-section{
+    height: 120vh;
+    }
+
+    .diva {
+    top: 0px;
+    left: 0px;
+    width: 15px;
+    }
+
+    .btn {
+    flex-direction:  column;
+    justify-content: center;         
+    align-items: center;
+    }
 
      .contatos-secao {
        width: 200px;
@@ -504,6 +537,9 @@ footer {
        font-size: 2rem;
     }
 
+    .first-section{
+    height: 120vh;
+    }
 
     .sobre-nos img {
         width: 300px;
@@ -516,5 +552,81 @@ footer {
         width: 200px;
      }
 
+}
+
+.bg-1 { 
+    width: 400px;
+    margin: auto;
+}
+
+.diva {
+    position: fixed;
+    top: 630px;
+    left: 1230px;
+    width: 150px;
+    z-index: 9999;
+    
+}
+
+.diva:hover {
+    width: 155px;
+    transition: all 400ms linear;
+}
+
+.caixa-carrinho div{
+    background-color: rgb(255, 255, 255);
+    width: 700px;
+    height: 500px;
+    top: 25%;
+    left: 25%;
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px;
+    border: 3px solid #3C174E;
+    display: none;
 
 }
+
+.caixa-carrinho h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.caixa-carrinho .comprar {
+    background-color: #3C174E;
+    color: white;
+    border: 1px solid #3C174E;
+    padding: 10px;
+    border-radius: 20px;
+    top: 635px;
+    left: 750px;
+    position: fixed;
+}
+
+.caixa-carrinho .comprar:hover {
+    cursor: pointer;
+    background-color: #3c174e56;
+    color: #3c174e;
+    transition: all 0.4s linear;
+}
+
+.caixa-carrinho .cancelar {
+    background-color: #ff3d3d;
+    color: rgb(255, 255, 255);
+    border: 1px solid #ff0000;
+    padding: 10px;
+    border-radius: 20px;
+    top: 635px;
+    left: 890px;
+    position: fixed;
+}
+
+.caixa-carrinho .cancelar:hover {
+    cursor: pointer;
+    background-color: #e60f0f6e;
+    color: #ff0000;
+    transition: all 0.4s linear;
+}
+
