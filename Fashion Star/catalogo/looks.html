@@ -47,56 +47,56 @@
             <img src="/img/roupas/Looks/conjunto-street-wear-masc.png" alt="moletom">
             <h2>Conjunto Street Wear Masculino</h2>
             <h3>R$699,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Street Wear Masculino" data-price="699.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-street-wear-fem.png" alt="#">
             <h2>Conjunto Street Wear Feminino</h2>
             <h3>R$999,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Street Wear Feminino" data-price="999.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-verao-masc.png" alt="#">
             <h2>Conjunto Verão Masculino</h2>
             <h3>R$774,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Verão Masculino" data-price="774.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-verao-fem.png" alt="#">
             <h2>Conjunto Verão Feminino</h2>
             <h3>R$549,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Verão Feminino" data-price="549.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-inverno-masc.png" alt="#">
             <h2>Conjunto Inverno Masculino</h2>
             <h3>R$1.049,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Inverno Masculino" data-price="1.049.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-inverno-fem.png" alt="moletom">
             <h2>Conjunto Inverno Feminino</h2>
             <h3>R$1.549,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Inverno Feminino" data-price="1.549.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-country-masc.png" alt="#">
             <h2>Conjunto Country Masculino</h2>
             <h3>R$774,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Country Masculino" data-price="774.90">Adicionar ao carrinho!</button>
         </div>
 
         <div class="shopping-div">
             <img src="/img/roupas/Looks/conjunto-country-fem.png" alt="#">
             <h2>Conjunto Country Feminino</h2>
             <h3>R$799,90</h3>
-            <button>Adicionar ao carrinho!</button>
+            <button class="adicionar" data-name="Conjunto Country Feminino" data-price="799.90">Adicionar ao carrinho!</button>
         </div>
 
 
@@ -105,8 +105,12 @@
 
     <div class="caixa-carrinho" id="caixacarrinho">
         <h1>Carrinho</h1>
-        <button class="comprar">Confirmar compra!</button>
-        <button class="cancelar" id="cancelar-compra">Cancelar compra!</button>
+        <ul class="items"></ul>
+        <p class="total-txt">Total: R$ <span class="total">0.00</span></p>
+        <div>
+            <button class="comprar">Confirmar compra!</button>
+            <button class="cancelar" id="cancelar-compra">Fechar carrinho</button>
+        </div>
     </div>
 
     <script src="/script.js"></script>

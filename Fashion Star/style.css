@@ -91,7 +91,7 @@ html {
 /* Primeira Seção */
 
 .first-section{
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     background-color: #EFEFEF;
     background-position: center center;
@@ -153,7 +153,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8));
+    background-image: linear-gradient(rgba(12, 12, 12, 0.6), rgba(15, 15, 15, 0.6)), url(/img/bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -318,24 +318,64 @@ footer {
 
 
 .caixa-carrinho {
+    display: none;
     background-color: rgb(255, 255, 255);
-    width: 700px;
-    height: 500px;
-    top: 25%;
-    left: 25%;
+    width: 80%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
     position: fixed;
-    z-index: 9999;
+    z-index: 99999;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px 1px;
     border: 3px solid #3C174E;
-    transform: rotate3d(#1f1e1f);
-    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.caixa-carrinho ul {
+    font-size: 25px;
+    
+}
+
+
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    color: #3C174E;
+}
+
+.caixa-carrinho .total-txt {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 15px;
+    color: #3C174E;
 }
 
 .caixa-carrinho h1 {
     text-align: center;
     font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.caixa-carrinho div {
+    display: flex;
+    flex-direction: row;
+}
+
+.caixa-carrinho button {
+    width: 30%;
+    margin: 10px auto;
+    display: block;
+    
 }
 
 .caixa-carrinho .comprar {
@@ -344,16 +384,14 @@ footer {
     border: 1px solid #3C174E;
     padding: 10px;
     border-radius: 20px;
-    top: 635px;
-    left: 750px;
-    position: fixed;
+    transition: all 0.4s linear;
+    margin-top: 25px;
 }
 
 .caixa-carrinho .comprar:hover {
     cursor: pointer;
     background-color: #3c174e56;
     color: #3c174e;
-    transition: all 0.4s linear;
 }
 
 .caixa-carrinho .cancelar {
@@ -362,16 +400,14 @@ footer {
     border: 1px solid #ff0000;
     padding: 10px;
     border-radius: 20px;
-    top: 635px;
-    left: 890px;
-    position: fixed;
+    transition: all 0.4s linear;
+    margin-top: 25px;
 }
 
 .caixa-carrinho .cancelar:hover {
     cursor: pointer;
     background-color: #e60f0f6e;
     color: #ff0000;
-    transition: all 0.4s linear;
 }
 
 
@@ -484,13 +520,6 @@ footer {
         height: 95vh;
     }
 
-    .caixa-carrinho .comprar {
-        left: 710px;
-    }
-    
-    .caixa-carrinho .cancelar {
-        left: 855px;
-    }
 
 }
 
@@ -511,17 +540,6 @@ footer {
 
     .itens-catalogo img:hover {
         width: 500px;
-    }
-
-    .caixa-carrinho {
-        left: 15%;
-    }
-
-    .caixa-carrinho .comprar {
-        left: 550px;
-    }
-    .caixa-carrinho .cancelar {
-        left: 700px;
     }
     
     .shopping h2 {
@@ -633,18 +651,6 @@ footer {
         width: 450px;
     }
 
-    .caixa-carrinho {
-        left: 10%;
-    }
-
-    .caixa-carrinho .comprar {
-        left: 500px;
-    }
-    .caixa-carrinho .cancelar {
-        left: 645px;
-    }
-
-
 }
 
 
@@ -666,19 +672,6 @@ footer {
     .itens-catalogo img:hover {
         width: 350px;
     }
-
-    .caixa-carrinho {
-        left: 4%;
-        width: 650px;
-    }
-
-    .caixa-carrinho .comprar {
-        left: 400px;
-    }
-    .caixa-carrinho .cancelar {
-        left: 540px;
-    }
-
 
 }
 
@@ -732,6 +725,9 @@ footer {
     flex-direction: column;
     }
 
+    .caixa-carrinho {
+        width: 90%;
+    }
     
 
     .catalogo {
@@ -745,18 +741,6 @@ footer {
     .txt {
         text-align: center;
         align-items: center;
-    }
-
-    .caixa-carrinho {
-        left: 2%;
-        width: 600px;
-    }
-
-    .caixa-carrinho .comprar {
-        left: 335px;
-    }
-    .caixa-carrinho .cancelar {
-        left: 475px;
     }
 
 }
@@ -816,22 +800,6 @@ footer {
         align-items: center;
     }
 
-    .caixa-carrinho {
-        left: 2%;
-        top: 10%;
-        width: 375px;
-        height: 600px;
-    }
-
-    .caixa-carrinho .comprar {
-        top: 625px;
-        left: 65px;
-    }
-    .caixa-carrinho .cancelar {
-        top: 625px;
-        left: 210px;
-    }
-
     .shopping h2 {
         font-size: 17px;
     }
@@ -839,6 +807,14 @@ footer {
     .shopping button {
         padding: 10px;
         font-size: 15px;
+    }
+
+    .info-item {
+        font-size: 20px;
+    }
+
+    .caixa-carrinho button {
+        width: 40%;
     }
 
 }
